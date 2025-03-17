@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web-service:
+    build: .
+    command: npm run start:web-service
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+
+  react-app:
+    build: .
+    command: npm run start:react-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app

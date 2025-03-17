@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "postinstall": "(cd react-app && npm install) && (cd web-service && npm install)",
+    "start:web-service": "cd web-service && node index.js",
+    "start:react-app": "cd react-app && npm run start",
+    "start:concurrently": "concurrently \"npm run start:web-service\" \"npm run start:react-app\""
+  }
+}
